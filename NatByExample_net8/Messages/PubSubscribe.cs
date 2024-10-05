@@ -1,9 +1,8 @@
 namespace Publist_Subscribe;
 
-
 public class PubSubscribe
 {
-        public async Task ReqReply()
+    public async Task ReqReply()
     {
         // Install `NATS.Net` from NuGet.
 
@@ -45,14 +44,14 @@ public class PubSubscribe
         Log("[REQ] From joe");
         var reply = await nats.RequestAsync<int, string>("greet.joe", 0, replyOpts: replyOpts);
         Log($"[REQ] {reply.Data}");
-        
+
         Log("----");
 
         Log("[REQ] From sue");
         reply = await nats.RequestAsync<int, string>("greet.sue", 0, replyOpts: replyOpts);
         Log($"[REQ] {reply.Data}");
         Log("----");
-        
+
         Log("[REQ] From bob");
         reply = await nats.RequestAsync<int, string>("greet.bob", 0, replyOpts: replyOpts);
         Log($"[REQ] {reply.Data}");
@@ -70,7 +69,7 @@ public class PubSubscribe
             Log($"[REQ] {reply.Data} - This will timeout. We should not see this message.");
         }
         catch (NatsNoRespondersException e)
-        // catch (Exception e)
+            // catch (Exception e)
         {
             Log($"[REQ] timed out! Mesaage: {e.Message}");
         }

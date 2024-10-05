@@ -6,6 +6,6 @@ var i = 0;
 
 var simplePubSub = new PubSubscribe();
 // await simplePubSub.PubSub();
-await RequestReplay.Run();
+await RequestReply.Run();
 Console.WriteLine("*****************************************************************************");
 await simplePubSub.ReqReply();

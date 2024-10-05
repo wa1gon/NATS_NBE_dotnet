@@ -1,6 +1,6 @@
 namespace Publist_Subscribe;
 
-public static class RequestReplay
+public static class RequestReply
 {
     public static async Task Run()
     {
