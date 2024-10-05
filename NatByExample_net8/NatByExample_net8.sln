@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publist_Subscribe", "Publist_Subscribe\Publist_Subscribe.csproj", "{183CDDD9-7F91-4B77-9F97-56B06F816D76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{183CDDD9-7F91-4B77-9F97-56B06F816D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
