@@ -84,35 +84,13 @@ namespace Publist_Subscribe
     }
     [JsonSerializable(typeof(MyData))]
     internal partial class MyJsonContext : JsonSerializerContext;
-    // internal class MyJsonContext : JsonSerializerContext
-    // {
-    //     public static MyJsonContext Default { get; } = new MyJsonContext(new JsonSerializerOptions());
-    //
-    //     public MyJsonContext(JsonSerializerOptions options) : base(options)
-    //     {
-    //     }
-
-        // public override JsonTypeInfo? GetTypeInfo(Type type)
-        // {
-        //     if (type == typeof(MyData))
-        //     {
-        //         var context = MyJsonContext.Default;
-        //         return JsonTypeInfo.CreateJsonTypeInfo<MyData>(context.Options, context);
-        //     }
-        //     return null;
-        // }
-
-    //     protected override JsonSerializerOptions? GeneratedSerializerOptions => new JsonSerializerOptions
-    //     {
-    //         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-    //         WriteIndented = true
-    //     };
-    // }
 
     public record MyData
     {
-        [JsonPropertyName("id")] public int Id { get; set; }
+        [JsonPropertyName("id")] 
+        public int Id { get; set; }
 
-        [JsonPropertyName("name")] public string? Name { get; set; }
+        [JsonPropertyName("name")] 
+        public string? Name { get; set; }
     }
 }
