@@ -2,10 +2,21 @@
 
 using Publist_Subscribe;
 
-var i = 0;
+
 
 var simplePubSub = new PubSubscribe();
 // await simplePubSub.PubSub();
+Console.WriteLine("*****************************************************************************");
+Console.WriteLine("Request Reply");
+Console.WriteLine("*****************************************************************************");
 await RequestReply.Run();
+
+Console.WriteLine("*****************************************************************************");
+Console.WriteLine("Pub Subscribe");
 Console.WriteLine("*****************************************************************************");
 await simplePubSub.ReqReply();
+
+Console.WriteLine("*****************************************************************************");
+Console.WriteLine("Json Payload");
+Console.WriteLine("*****************************************************************************");
+await JSONPayload.Run();

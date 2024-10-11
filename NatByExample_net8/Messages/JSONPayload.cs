@@ -6,9 +6,9 @@ using Publist_Subscribe;
 
 namespace Publist_Subscribe
 {
-    public class JSONPayload
+    public static class JSONPayload
     {
-        async Task Run()
+        public static async Task Run()
         {
             using var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
             var logger = loggerFactory.CreateLogger("NATS-by-Example");
@@ -82,30 +82,32 @@ namespace Publist_Subscribe
             logger.LogInformation("Bye!");
         }
     }
+    [JsonSerializable(typeof(MyData))]
+    internal partial class MyJsonContext : JsonSerializerContext;
+    // internal class MyJsonContext : JsonSerializerContext
+    // {
+    //     public static MyJsonContext Default { get; } = new MyJsonContext(new JsonSerializerOptions());
+    //
+    //     public MyJsonContext(JsonSerializerOptions options) : base(options)
+    //     {
+    //     }
 
-    internal class MyJsonContext : JsonSerializerContext
-    {
-        public static MyJsonContext Default { get; } = new MyJsonContext(new JsonSerializerOptions());
+        // public override JsonTypeInfo? GetTypeInfo(Type type)
+        // {
+        //     if (type == typeof(MyData))
+        //     {
+        //         var context = MyJsonContext.Default;
+        //         return JsonTypeInfo.CreateJsonTypeInfo<MyData>(context.Options, context);
+        //     }
+        //     return null;
+        // }
 
-        public MyJsonContext(JsonSerializerOptions options) : base(options)
-        {
-        }
-
-        public override JsonTypeInfo? GetTypeInfo(Type type)
-        {
-            if (type == typeof(MyData))
-            {
-                return JsonTypeInfo.CreateJsonTypeInfo<MyData>(this);
-            }
-            return null;
-        }
-
-        protected override JsonSerializerOptions? GeneratedSerializerOptions => new JsonSerializerOptions
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            WriteIndented = true
-        };
-    }
+    //     protected override JsonSerializerOptions? GeneratedSerializerOptions => new JsonSerializerOptions
+    //     {
+    //         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+    //         WriteIndented = true
+    //     };
+    // }
 
     public record MyData
     {
