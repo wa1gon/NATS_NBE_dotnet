@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{183CDDD9-7F91-4B77-9F97-56B06F816D76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetStreamNBE", "..\JetStream\JetStreamNBE\JetStreamNBE.csproj", "{03EBCBE7-8718-47C0-AA4C-28214394AF92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{183CDDD9-7F91-4B77-9F97-56B06F816D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{183CDDD9-7F91-4B77-9F97-56B06F816D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{183CDDD9-7F91-4B77-9F97-56B06F816D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EBCBE7-8718-47C0-AA4C-28214394AF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EBCBE7-8718-47C0-AA4C-28214394AF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EBCBE7-8718-47C0-AA4C-28214394AF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EBCBE7-8718-47C0-AA4C-28214394AF92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
