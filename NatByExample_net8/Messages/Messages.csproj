@@ -8,6 +8,7 @@
         <RootNamespace>Publist_Subscribe</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.28.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
         <PackageReference Include="NATS.Client.Core" Version="2.5.0" />
         <PackageReference Include="NATS.Client.Serializers.Json" Version="2.5.0" />
