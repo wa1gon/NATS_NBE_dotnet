@@ -26,3 +26,13 @@ await JSONPayload.Run();
 // Console.WriteLine("ProtoBuf");
 // Console.WriteLine("*****************************************************************************");
 // await ProtoBuf.Run();
+
+Console.WriteLine("*****************************************************************************");
+Console.WriteLine("Concurrent Message");
+Console.WriteLine("*****************************************************************************");
+await ConcurrentMessage.Run();
+
+Console.WriteLine("*****************************************************************************");
+Console.WriteLine("Iterating over multiple subscriptions");
+Console.WriteLine("*****************************************************************************");
+await MultipleSubs.Run();
