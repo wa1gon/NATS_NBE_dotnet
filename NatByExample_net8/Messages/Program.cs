@@ -21,7 +21,7 @@ Console.WriteLine("Json Payload");
 Console.WriteLine("*****************************************************************************");
 await JSONPayload.Run();
 
-// Hash Runtime error
+// Has Runtime error
 // Console.WriteLine("*****************************************************************************");
 // Console.WriteLine("ProtoBuf");
 // Console.WriteLine("*****************************************************************************");
